@@ -8,9 +8,10 @@ const INITIAL_STATE = {
 }
 
 //redux-thunk calls async action with dispatch and getState as arguments
-export const fetchUsersAsyncAction = () => (dispatch, getState) => {
+export const fetchUsersAsyncAction = (url) => (dispatch, getState) => {
     dispatch(startFetchingAction())
-    fetch('https://randomuser.me/api')
+
+    fetch(url)
         .then(r => r.json())
         .then(data => {
             dispatch(setUsersAction(data.results))
@@ -23,7 +24,7 @@ export const fetchUsersAsyncAction = () => (dispatch, getState) => {
 
 const startFetchingAction = () => ({ type: START_FETCHING })
 const stopFetchingAction = () => ({ type: STOP_FETCHING })
-const errorFetchingAction = () => ({ ERROR_FETCHING })
+const errorFetchingAction = () => ({ type: ERROR_FETCHING })
 
 const setUsersAction = users => ({
     type: SET_USERS,

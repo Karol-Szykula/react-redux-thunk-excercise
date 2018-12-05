@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 
 // import reducers here
 import counter from './state/counter'
-import randomUsers, { fetchUsersAsyncAction } from './state/randomUsers'
+import randomUsers from './state/randomUsers'
 
 const reducer = combineReducers({
     counter,

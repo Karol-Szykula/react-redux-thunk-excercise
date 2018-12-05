@@ -6,7 +6,9 @@ const RandomUsers = (props) => (
     <div>
         {
             props._users.map(
-                user => <div>
+                user => <div
+                    key={user.name.first}
+                >
                     {
                         user.name.first
                     }

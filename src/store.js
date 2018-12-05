@@ -1,20 +1,10 @@
-import { combineReducers, createStore } from 'redux';
+import { combineReducers, createStore } from 'redux'
 
-const reducer1 = () => {
-    return {
-        name: 'Ala'
-    }
-}
+import counter from './state/counter'
 
-const reducer2 = () => {
-    return {
-        name: 'Ola'
-    }
-}
 
 const rootReducer = combineReducers({
-    reducer1,
-    reducer2
+    counter
 })
 
 export const store = createStore(

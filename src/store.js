@@ -19,4 +19,4 @@ export const store = createStore(
     )
 )
 
-store.dispatch(fetchUsersAsyncAction())
+// store.dispatch(fetchUsersAsyncAction())

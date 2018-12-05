@@ -3,9 +3,11 @@ import thunk from 'redux-thunk'
 
 // import reducers here
 import counter from './state/counter'
+import randomUsers from './state/randomUsers'
 
 const reducer = combineReducers({
-    counter
+    counter,
+    randomUsers
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
